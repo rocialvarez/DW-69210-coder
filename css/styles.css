@@ -12,6 +12,7 @@
 rojo cereza #A31D1D
 crema #E5D0AC
 marroncito #6D2323
+fondo #FFCDBC
 
 poppins: "Poppins", sans-serif;
 
@@ -114,12 +115,13 @@ header li {
 /* MAIN INDEX */ 
 
 .bienvenida {
-    background-color: #A31D1D;
+    background-image: url(../medios/fondo-estrellas.png);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    /* text-align: justify;
-     */
+    justify-content: left;
 }
 .bienvenidaTitulo {
     background-color: #A31D1D;
@@ -143,7 +145,7 @@ header li {
 .presentacion {
     width: 50%;
     background-color: #A31D1D;
-    padding: 15px;
+    padding: 20px;
 }
 
 .presentacion p {
@@ -151,20 +153,6 @@ header li {
     text-align: justify;
     font-size: 1.3em;
     margin:15px;
-}
-
-.imagenBienvenida {
-    background-color: #A31D1D;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 450px;
-}
-
-.imagenBienvenida img {
-    width: 50%;
-    height: 95%;
 }
 
 
@@ -181,6 +169,12 @@ header li {
 .miTitulo h1 {
     text-align: center;
     color: #E5D0AC;
+}
+
+.miTitulo p {
+    color: white;
+    text-align: center;
+    font-style: italic;
 }
 
 .contenedorInfo {
@@ -213,7 +207,8 @@ header li {
     text-align: justify;
     font-size: 1em;
     padding:50px;
-
+    overflow-y: scroll; 
+    scrollbar-width: none;
 }
 
 .influencias {
@@ -232,6 +227,8 @@ header li {
     text-align: justify;
     font-size: 1em;
     padding:50px;
+    overflow-y: scroll; 
+    scrollbar-width: none;
 }
 
 .habilidades {
@@ -250,14 +247,45 @@ header li {
     text-align: justify;
     font-size: 1em;
     padding:50px;
+    overflow-y: scroll; 
+    scrollbar-width: none;
 }
+
+/* MAIN PROYECTOS */
+
+.proyectosPadre {
+    /* background-color: #E5D0AC; */
+    position: static;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:auto;
+    height:50%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.card {
+    position: static;
+}
+
+.card p {
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 3s;
+ }
 
 /* FOOTER */
 
 footer {
     background-color: #E5D0AC;
+    list-style-type:none;
     display:flex;
-    justify-content: space-around;
+    justify-content:space-between;
+    align-items:center;
     padding:15px;
 }
 
@@ -285,6 +313,7 @@ footer img, svg {
 @media (max-width:500px) {
 
 header {
+        width:100%;
         flex-direction: column;
         align-items: center;
     }
@@ -293,6 +322,13 @@ nav {
         width:100%;
         flex-direction: column;
         align-items: center;
+    }
+
+    footer {
+        width:100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-evenly;
     }
 
 .bienvenida {
@@ -308,9 +344,6 @@ nav {
     padding: 15px;
 }
 
-.imagenBienvenida {
-    width: 50%;
-}
 
     .contenedorInfo {
         grid-template-columns: 1fr;
@@ -323,5 +356,28 @@ nav {
         "titulo-3"
         "texto-3";
     }
+
+.miTitulo {
+    max-width: 460px;
+    text-align: center;
+}    
+
+.miTitulo p {
+    max-width: 460px;
+    text-align: center;
+}
+.proyectosPadre {
+    position:static;
+    max-width:460px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}    
+
+.card {
+    position:static;
+    max-width:20rem;
+}
 
 }
