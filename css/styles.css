@@ -68,6 +68,7 @@ header {
     justify-content:space-between;
     position: sticky;
     top: 0;
+    z-index: 9;
 }
 
 
@@ -278,6 +279,110 @@ header li {
   --animate-duration: 3s;
  }
 
+ /* MAIN SERVICIOS */
+
+.contenedorServicios {
+    display:grid;
+    grid-template-areas: 
+    "numero-1 texto-1"
+    "texto-2 numero-2"
+    "numero-3 texto-3" ;
+
+    grid-template-columns: 500px 500px;
+    grid-template-rows: repeat(3, 350px);
+
+    justify-content: center;
+    row-gap: 20px;
+
+    padding-bottom: 50px;
+}
+
+.contenedorServicios h2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 7em;
+      padding:30px;
+}
+
+.numUno {
+    grid-area: numero-1;
+    background-color: #E5D0AC;
+}
+
+.numDos {
+    grid-area: numero-2;
+    background-color: #E5D0AC;
+}
+
+.numTres {
+    grid-area: numero-3;
+    background-color: #E5D0AC;
+}
+
+.textoUno {
+    grid-area: texto-1;
+    background-color: #000;
+    height:342px;
+    text-align: left;
+    color: #E5D0AC;
+    font-size: 1em;
+    padding:25px;
+}
+
+.textoDos {
+    grid-area: texto-2;
+    background-color: #000;
+    height:342px;
+    text-align: left;
+    color: #E5D0AC;
+    font-size: 1em;
+    padding:25px;
+}
+
+.textoTres {
+    grid-area: texto-3;
+    background-color: #000;
+    height:342px;
+    text-align: left;
+    color: #E5D0AC;
+    font-size: 1em;
+    padding:25px;
+}
+
+/* FORMULARIO */
+.textoForm {
+    text-align: center;
+    color:#E5D0AC;
+    padding: 30px 30px 30px 30px;
+}
+
+.enContacto form {
+    background-color: #E5D0AC;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+input{
+    width: 60%;
+    margin: 15px auto;
+}
+
+.boton {
+    width:80px;
+    padding:10px;
+    margin-top:20px;
+}
+
 /* FOOTER */
 
 footer {
@@ -316,6 +421,7 @@ header {
         width:100%;
         flex-direction: column;
         align-items: center;
+        z-index: 9;
     }
 
 nav {
@@ -329,6 +435,7 @@ nav {
         flex-direction: column;
         justify-content: center;
         align-items: space-evenly;
+        bottom:0;
     }
 
 .bienvenida {
@@ -366,9 +473,12 @@ nav {
     max-width: 460px;
     text-align: center;
 }
+
+/* PROYECTOS  */
+
 .proyectosPadre {
     position:static;
-    max-width:460px;
+    max-width:500px;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -378,6 +488,54 @@ nav {
 .card {
     position:static;
     max-width:20rem;
+}
+
+/* SERVICIOS */
+
+.contenedorServicios {
+   grid-template-columns: repeat(2, 40%);
+    grid-template-rows: repeat(3, 250px);
+    grid-template-areas: 
+    "numero-1 texto-1"
+    "texto-2 numero-2"
+    "numero-3 texto-3" ;
+
+    justify-content: center;
+    row-gap: 20px;
+
+    padding-bottom: 50px;
+}
+
+.textoUno, .textoDos, .textoTres {
+    height: 243px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+/* FORMULARIO */
+
+.enContacto form {
+    background-color: #E5D0AC;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 15px;
+}
+
+input{
+    width: 70%;
+    margin: 15px auto;
+}
+
+.boton {
+    width:80px;
+    padding:10px;
+    margin-top:20px;
 }
 
 }
