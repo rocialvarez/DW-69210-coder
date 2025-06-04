@@ -1,0 +1,45 @@
+@use "./variables" as*;
+
+
+.bienvenidaTitulo {
+    background-color: $rojo;
+    text-align: center;
+    font-weight: 500;
+    color:$rojo;
+    padding: 35px;
+
+    .bienvenidaGrande {
+    text-align: center;
+    color: $crema;
+}
+
+    .bienvenidaTexto {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+}
+
+.bienvenida {
+    background-image: url(../medios/fondo-estrellas.png);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+
+        .presentacion {
+    width: 50%;
+    background-color: $rojo;
+    padding: 20px;
+
+           p {
+    color: #fff;
+    text-align: justify;
+    font-size: 1.3em;
+    margin:15px;
+}
+}
+}

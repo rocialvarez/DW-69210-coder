@@ -1,0 +1,94 @@
+ @use "./variables" as*;
+
+ .miTitulo {
+    background-color: $rojo;
+    text-align: center;
+    font-weight: 500;
+    color:$rojo;
+    padding: 30px 30px 30px 30px;
+     
+    h1 {
+    text-align: center;
+    color: $crema;
+}
+
+    p {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+}
+
+.contenedorInfo {
+    display:grid;
+    grid-template-areas: 
+    "titulo-1 titulo-2 titulo-3"
+    "texto-1 texto-2 texto-3" ;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 90px 400px;
+    justify-content: space-between;
+    column-gap: 0px;
+    row-gap:0px;
+
+        .tituloSobre {
+    grid-area: titulo-1;
+    background-color: $rojo;
+    text-align: center;
+    color: $crema;
+    font-size: 1.3em;
+    font-weight: 500;
+    padding:30px 15px;
+}
+     .textoSobre {
+    grid-area: texto-1;
+    background-color: $crema;
+    color: #000;
+    text-align: justify;
+    font-size: 1em;
+    padding:50px;
+    overflow-y: scroll; 
+    scrollbar-width: none;
+}
+
+.influencias {
+    grid-area: titulo-2;
+    background-color: $rojo;
+    text-align: center;
+    color: $crema;
+    font-size: 1.3em;
+     padding:30px 15px;
+}
+
+.textoInflu {
+    grid-area: texto-2;
+    background-color: $crema;
+    color: #000;
+    text-align: justify;
+    font-size: 1em;
+    padding:50px;
+    overflow-y: scroll; 
+    scrollbar-width: none;
+}
+
+.habilidades {
+    grid-area: titulo-3;
+    background-color: $rojo;
+    text-align: center;
+    color: $crema;
+    font-size: 1.3em;
+    padding:30px 15px;
+}
+
+.textoHabilidades {
+    grid-area: texto-3;
+    background-color: $crema;
+    color: #000;
+    text-align: justify;
+    font-size: 1em;
+    padding:50px;
+    overflow-y: scroll; 
+    scrollbar-width: none;
+}
+}

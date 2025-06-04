@@ -1,0 +1,71 @@
+@use "./variables" as*;
+
+header {
+    background-color: $crema;
+    display: flex; 
+    flex-direction: row;
+    justify-content:space-between;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+
+    .titulo {
+    font-size:26px;
+    font-weight: 300;
+    @include flex(row, center, center);
+     margin:15px;
+
+           b {
+             color:$rojo;
+             font-style: italic;
+             margin-left:4px;
+           } 
+    }
+
+    nav {
+    background-color:none;
+    width:40%;
+    margin-right:15px;
+
+        ul { 
+         list-style-type:none;
+         display:flex;
+         justify-content:space-between;
+         align-items:center;
+         height:100%;
+
+             li {
+             list-style:none;
+             }
+        }
+}
+
+}
+
+footer {
+    background-color: $crema;
+    list-style-type:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+
+        p {
+    font-style: italic;
+    text-align: left; 
+        }
+
+        h3 {
+
+    text-align: left;
+    font-style: italic;
+    font-size:12px;
+    padding:5px;
+
+     }
+
+     img, svg {
+    height:30px;
+    width:30px;
+}
+}

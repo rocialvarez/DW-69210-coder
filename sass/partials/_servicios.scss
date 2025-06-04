@@ -1,0 +1,62 @@
+@use "./variables" as*;
+
+.contenedorServicios {
+    display:grid;
+    grid-template-areas: 
+    "numero-1 texto-1"
+    "texto-2 numero-2"
+    "numero-3 texto-3" ;
+
+    grid-template-columns: 500px 500px;
+    grid-template-rows: repeat(3, 350px);
+
+    justify-content: center;
+    row-gap: 20px;
+
+    padding-bottom: 50px;
+
+        h2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 7em;
+      padding:30px;
+}
+
+       .numUno {
+    grid-area: numero-1;
+    color: $crema;
+}
+
+.numDos {
+    grid-area: numero-2;
+    color: $crema;
+}
+
+.numTres {
+    grid-area: numero-3;
+    color: $crema;
+}
+
+.textoUno {
+    grid-area: texto-1;
+    background-color: $crema;
+    height:342px;
+    text-align: center;
+    color: $marroncito;
+    font-size: 1.3em;
+    padding:25px;
+}
+
+.textoDos {
+    @extend .textoUno;
+    grid-area: texto-2;
+}
+
+.textoTres {
+    @extend .textoUno;
+    grid-area: texto-3;
+} 
+}

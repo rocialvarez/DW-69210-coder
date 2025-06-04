@@ -1,0 +1,409 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #A31D1D;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  color: black;
+}
+
+p {
+  padding: 5px;
+  text-align: left;
+}
+
+h1 {
+  text-align: left;
+  font-size: 26px;
+  font-weight: 700;
+  color: black;
+}
+
+h2 {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 500;
+  padding-top: 2px;
+}
+
+li {
+  margin-left: 30px;
+  list-style: circle;
+}
+
+li a {
+  color: #A31D1D;
+  text-decoration: none;
+}
+
+header {
+  background-color: #E5D0AC;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
+header .titulo {
+  font-size: 26px;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+header .titulo b {
+  color: #A31D1D;
+  font-style: italic;
+  margin-left: 4px;
+}
+header nav {
+  background-color: none;
+  width: 40%;
+  margin-right: 15px;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+header nav ul li {
+  list-style: none;
+}
+
+footer {
+  background-color: #E5D0AC;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+footer p {
+  font-style: italic;
+  text-align: left;
+}
+footer h3 {
+  text-align: left;
+  font-style: italic;
+  font-size: 12px;
+  padding: 5px;
+}
+footer img, footer svg {
+  height: 30px;
+  width: 30px;
+}
+
+.bienvenidaTitulo {
+  background-color: #A31D1D;
+  text-align: center;
+  font-weight: 500;
+  color: #A31D1D;
+  padding: 35px;
+}
+.bienvenidaTitulo .bienvenidaGrande {
+  text-align: center;
+  color: #E5D0AC;
+}
+.bienvenidaTitulo .bienvenidaTexto {
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+
+.bienvenida {
+  background-image: url(../medios/fondo-estrellas.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+.bienvenida .presentacion {
+  width: 50%;
+  background-color: #A31D1D;
+  padding: 20px;
+}
+.bienvenida .presentacion p {
+  color: #fff;
+  text-align: justify;
+  font-size: 1.3em;
+  margin: 15px;
+}
+
+.miTitulo {
+  background-color: #A31D1D;
+  text-align: center;
+  font-weight: 500;
+  color: #A31D1D;
+  padding: 30px 30px 30px 30px;
+}
+.miTitulo h1 {
+  text-align: center;
+  color: #E5D0AC;
+}
+.miTitulo p {
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+
+.contenedorInfo {
+  display: grid;
+  grid-template-areas: "titulo-1 titulo-2 titulo-3" "texto-1 texto-2 texto-3";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 90px 400px;
+  justify-content: space-between;
+  column-gap: 0px;
+  row-gap: 0px;
+}
+.contenedorInfo .tituloSobre {
+  grid-area: titulo-1;
+  background-color: #A31D1D;
+  text-align: center;
+  color: #E5D0AC;
+  font-size: 1.3em;
+  font-weight: 500;
+  padding: 30px 15px;
+}
+.contenedorInfo .textoSobre {
+  grid-area: texto-1;
+  background-color: #E5D0AC;
+  color: #000;
+  text-align: justify;
+  font-size: 1em;
+  padding: 50px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.contenedorInfo .influencias {
+  grid-area: titulo-2;
+  background-color: #A31D1D;
+  text-align: center;
+  color: #E5D0AC;
+  font-size: 1.3em;
+  padding: 30px 15px;
+}
+.contenedorInfo .textoInflu {
+  grid-area: texto-2;
+  background-color: #E5D0AC;
+  color: #000;
+  text-align: justify;
+  font-size: 1em;
+  padding: 50px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.contenedorInfo .habilidades {
+  grid-area: titulo-3;
+  background-color: #A31D1D;
+  text-align: center;
+  color: #E5D0AC;
+  font-size: 1.3em;
+  padding: 30px 15px;
+}
+.contenedorInfo .textoHabilidades {
+  grid-area: texto-3;
+  background-color: #E5D0AC;
+  color: #000;
+  text-align: justify;
+  font-size: 1em;
+  padding: 50px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.proyectosPadre {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: auto;
+  height: 50%;
+  padding: 10px;
+  margin: 10px;
+}
+.proyectosPadre .card {
+  position: static;
+}
+.proyectosPadre .card p {
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.proyectosPadre .animate__animated.animate__fadeIn {
+  --animate-duration: 3s;
+}
+
+.contenedorServicios {
+  display: grid;
+  grid-template-areas: "numero-1 texto-1" "texto-2 numero-2" "numero-3 texto-3";
+  grid-template-columns: 500px 500px;
+  grid-template-rows: repeat(3, 350px);
+  justify-content: center;
+  row-gap: 20px;
+  padding-bottom: 50px;
+}
+.contenedorServicios h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 7em;
+  padding: 30px;
+}
+.contenedorServicios .numUno {
+  grid-area: numero-1;
+  color: #E5D0AC;
+}
+.contenedorServicios .numDos {
+  grid-area: numero-2;
+  color: #E5D0AC;
+}
+.contenedorServicios .numTres {
+  grid-area: numero-3;
+  color: #E5D0AC;
+}
+.contenedorServicios .textoUno, .contenedorServicios .textoTres, .contenedorServicios .textoDos {
+  grid-area: texto-1;
+  background-color: #E5D0AC;
+  height: 342px;
+  text-align: center;
+  color: #6D2323;
+  font-size: 1.3em;
+  padding: 25px;
+}
+.contenedorServicios .textoDos {
+  grid-area: texto-2;
+}
+.contenedorServicios .textoTres {
+  grid-area: texto-3;
+}
+
+.enContacto form {
+  background-color: #E5D0AC;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.textoForm {
+  text-align: center;
+  color: #E5D0AC;
+  padding: 30px 30px 30px 30px;
+}
+
+input {
+  width: 60%;
+  margin: 15px auto;
+}
+
+.boton {
+  width: 80px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    z-index: 9;
+  }
+  header nav {
+    width: 100%;
+    align-items: center;
+  }
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+    bottom: 0;
+  }
+  .bienvenida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .presentacion {
+    width: 100%;
+    background-color: #A31D1D;
+    padding: 15px;
+  }
+  .contenedorInfo {
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 200px;
+    grid-template-areas: "titulo-1" "texto-1" "titulo-2" "texto-2" "titulo-3" "texto-3";
+  }
+  .miTitulo {
+    max-width: 460px;
+    text-align: center;
+  }
+  .miTitulo p {
+    max-width: 460px;
+    text-align: center;
+  }
+  .proyectosPadre {
+    position: static;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card {
+    position: static;
+    max-width: 20rem;
+  }
+  .contenedorServicios {
+    grid-template-columns: repeat(2, 40%);
+    grid-template-rows: repeat(3, 300px);
+    grid-template-areas: "numero-1 texto-1" "texto-2 numero-2" "numero-3 texto-3";
+    justify-content: center;
+    row-gap: 70px;
+    padding-bottom: 70px;
+  }
+  .textoUno, .textoDos, .textoTres {
+    height: 243px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+  .enContacto form {
+    background-color: #E5D0AC;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 15px;
+  }
+  input {
+    width: 70%;
+    margin: 15px auto;
+  }
+  .boton {
+    width: 80px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

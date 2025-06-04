@@ -1,0 +1,25 @@
+@use "./variables" as*;
+
+.proyectosPadre {
+    position: static;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:auto;
+    height:50%;
+    padding: 10px;
+    margin: 10px;
+
+    .card {
+    position: static;
+
+          p {
+    overflow: scroll;
+    scrollbar-width: none;
+}
+}
+
+    .animate__animated.animate__fadeIn {
+  --animate-duration: 3s;
+ }
+}

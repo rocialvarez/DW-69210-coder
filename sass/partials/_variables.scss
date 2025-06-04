@@ -1,0 +1,14 @@
+
+// fondo #FFCDBC
+
+$rojo: #A31D1D;
+$crema:  #E5D0AC;
+$marroncito: #6D2323;
+$font: "Poppins", sans-serif;
+
+@mixin flex ($direccion, $justify, $align){
+    display:flex;
+    flex-direction: $direccion;
+    justify-content: $justify;
+    align-items: $align;
+}

@@ -1,0 +1,131 @@
+@use "./variables" as*;
+
+@media only screen and (max-width:500px) {
+
+header {
+        flex-direction: column;
+        align-items: center;
+        z-index: 9;
+        
+        nav {
+        width: 100%;    
+        align-items: center;
+    }
+
+    }
+
+
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: space-evenly;
+        bottom:0;
+    }
+
+.bienvenida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.presentacion {
+    width: 100%;
+    background-color: #A31D1D;
+    padding: 15px;
+}
+
+
+    .contenedorInfo {
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px 200px;
+        grid-template-areas: 
+        "titulo-1"
+        "texto-1"
+        "titulo-2"
+        "texto-2"
+        "titulo-3"
+        "texto-3";
+    }
+
+.miTitulo {
+    max-width: 460px;
+    text-align: center;
+
+    p {
+    max-width: 460px;
+    text-align: center;
+}
+}    
+
+
+// SOBRE MI
+
+
+// PROYECTOS
+
+.proyectosPadre {
+    position:static;
+    max-width:500px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}    
+
+.card {
+    position:static;
+    max-width:20rem;
+}
+
+// SERVICIOS
+
+.contenedorServicios {
+   grid-template-columns: repeat(2, 40%);
+    grid-template-rows: repeat(3, 300px);
+    grid-template-areas: 
+    "numero-1 texto-1"
+    "texto-2 numero-2"
+    "numero-3 texto-3" ;
+
+    justify-content: center;
+    row-gap: 70px;
+
+    padding-bottom: 70px;
+}
+
+.textoUno, .textoDos, .textoTres {
+    height: 243px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+// FORMULARIO
+
+.enContacto form {
+    background-color: #E5D0AC;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 15px;
+}
+
+input{
+    width: 70%;
+    margin: 15px auto;
+}
+
+.boton {
+    width:80px;
+    padding:10px;
+    margin-top:20px;
+}
+
+
+}

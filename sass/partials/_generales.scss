@@ -1,0 +1,46 @@
+@use "./variables" as*;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $rojo;
+    font-family: $font;
+    font-size: 13px;
+    color: black;
+}
+
+p {
+    padding: 5px;
+    text-align: left;
+}
+
+h1 {
+    text-align: left;
+    font-size: 26px;
+    font-weight: 700;
+    color: black;
+}
+
+
+h2 {
+    text-align: left;
+    font-size: 13px;
+    font-weight: 500;
+    padding-top: 2px;
+}
+
+li {
+
+    margin-left: 30px;
+    list-style: circle;
+
+}
+
+li a {
+    color: $rojo;
+    text-decoration: none;
+}
