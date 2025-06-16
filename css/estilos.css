@@ -134,6 +134,7 @@ footer img, footer svg {
   padding: 20px;
 }
 .bienvenida .presentacion p {
+  width: 100%;
   color: #fff;
   text-align: justify;
   font-size: 1.3em;
@@ -337,13 +338,17 @@ input {
   }
   .bienvenida {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
   }
   .presentacion {
-    width: 100%;
     background-color: #A31D1D;
-    padding: 15px;
+    padding: 10px;
+  }
+  .presentacion p {
+    color: #fff;
+    text-align: justify;
+    font-size: 2em;
   }
   .contenedorInfo {
     grid-template-columns: 1fr;
