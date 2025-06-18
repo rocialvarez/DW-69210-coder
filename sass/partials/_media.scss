@@ -1,15 +1,21 @@
 @use "./variables" as*;
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:768px) {
 
 header {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: baseline;
         z-index: 9;
+
+        .titulo {
+            width:100%;
+            font-size:20px;
+        }
+
+    .navbar {
+        width:50%;
         
-        nav {
-        width: 100%;    
-        align-items: center;
     }
 
     }
@@ -24,6 +30,7 @@ header {
     }
 
 .bienvenida {
+    background-image: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -44,7 +51,7 @@ header {
 
     .contenedorInfo {
         grid-template-columns: 1fr;
-        grid-template-rows: 90px 200px;
+        grid-template-rows: 100px;
         grid-template-areas: 
         "titulo-1"
         "texto-1"
@@ -55,11 +62,9 @@ header {
     }
 
 .miTitulo {
-    max-width: 460px;
     text-align: center;
 
     p {
-    max-width: 460px;
     text-align: center;
 }
 }    
@@ -72,7 +77,6 @@ header {
 
 .proyectosPadre {
     position:static;
-    max-width:500px;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -81,7 +85,7 @@ header {
 
 .card {
     position:static;
-    max-width:20rem;
+    max-width:25rem;
 }
 
 // SERVICIOS
